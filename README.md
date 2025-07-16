@@ -47,6 +47,7 @@ This repository is the official PyTorch implementation of "PAN-Crafter: Learning
 
 ## 📧 News
 - **⚠ The code will be released later**
+- **Jun 26, 2025:** PAN-Crafter accepted to ICCV 2025 :tada:
 - **May 30, 2025:** This repository is created
 
 ---
