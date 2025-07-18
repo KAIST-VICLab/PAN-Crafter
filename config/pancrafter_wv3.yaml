@@ -1,0 +1,66 @@
+seed: 2025
+num_worker: 4
+work_dir: /PANCrafter/wv3
+
+phase: train
+
+# feeder
+feeder: feeders.feeder.PanFeeder
+train_feeder_args:
+  dataroot: /PanCollection/WV3/train_wv3.h5
+  crop: True
+  hflip: True
+  vflip: True
+  rot: True
+  crop_ratio: 0.75
+  ms_size: 16
+
+val_feeder_args:
+  dataroot: /PanCollection/WV3/valid_wv3.h5
+
+test_reduced_feeder_args:
+  dataroot: /PanCollection/WV3/reduced_examples_h5/test_wv3_multiExm1.h5
+
+test_full_feeder_args:
+  dataroot: /PanCollection/WV3/full_examples_h5/test_wv3_OrigScale_multiExm1.h5
+
+# data
+num_bands: 8
+max_pixel: 2047.0
+
+# model
+model: model.pancrafter.PANCrafter
+model_args:
+  in_channels: 1
+  out_channels: 8
+  hidden_size: [128, 128, 128, 128]
+  s_embed_size: 128
+  dropout: 0.2
+  use_scale_shift_norm: True
+  depth: [2, 2, 2, 2]
+  pan_ks: 3
+  ms_ks: 3
+  ka: 3
+
+# optim
+optimizer: AdamW
+learning_rate: 1e-4
+weight_decay: 0.01
+lr_scheduler: cosine
+num_iter: 50000
+num_warmup: 100
+
+# loss
+res: True
+w_off: 1.0
+
+# logging
+log_iter: 100
+save_iter: 10000
+save_epoch: 500
+eval_epoch: 5
+
+# training
+gpu: 0
+batch_size: 48  # duplicate
+test_batch_size: 1
