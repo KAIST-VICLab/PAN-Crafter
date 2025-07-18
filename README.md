@@ -1,5 +1,5 @@
 <div align="center">
-<h2>PAN-Crafter: Learning Modality-Consistent Alignment for PAN-Sharpening</h2>
+<h2>[ICCV 2025] PAN-Crafter: Learning Modality-Consistent Alignment for PAN-Sharpening</h2>
 
 <div>    
     <a href='https://sites.google.com/view/jeonghyeokdo/' target='_blank'>Jeonghyeok Do</a><sup>1</sup>&nbsp&nbsp&nbsp&nbsp;
