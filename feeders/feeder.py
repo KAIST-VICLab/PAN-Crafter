@@ -29,46 +29,19 @@ class PanFeeder(Dataset):
                 self.max_pixel = 1.
                 print("Unsupported dataset.")
 
-        if 'train' in self.dataroot:
-            trainroot = self.dataroot
-            trainroot_pan = trainroot.replace(".h5", "_pan.h5")
+        with h5py.File(self.dataroot, 'r') as h5_file:
+            if "/gt" in h5_file:
+                self.has_gt = True
+                self.gt = h5_file['gt'][:].transpose(0, 2, 3, 1)
+            else:
+                self.has_gt = False
 
-            with h5py.File(trainroot, 'r') as h5_file:
-                if "/gt" in h5_file:
-                    self.has_gt = True
-                    train_gt = h5_file['gt'][:].transpose(0, 2, 3, 1)
-                else:
-                    self.has_gt = False
+            self.lms = h5_file['lms'][:].transpose(0, 2, 3, 1)
+            self.ms = h5_file['ms'][:].transpose(0, 2, 3, 1)
+            self.pan = h5_file['pan'][:].transpose(0, 2, 3, 1)
 
-                train_lms = h5_file['lms'][:].transpose(0, 2, 3, 1)
-                train_ms = h5_file['ms'][:].transpose(0, 2, 3, 1)
-                train_pan = h5_file['pan'][:].transpose(0, 2, 3, 1)
-
-            with h5py.File(trainroot_pan, 'r') as h5_file:
-                train_lpan = h5_file['lpan'][:].transpose(0, 2, 3, 1)
-
-            if self.has_gt:
-                self.gt = train_gt
-
-            self.lms = train_lms
-            self.ms = train_ms
-            self.pan = train_pan
-            self.lpan = train_lpan
-
-        else:
-            with h5py.File(self.dataroot, 'r') as h5_file:
-                if "/gt" in h5_file:
-                    self.has_gt = True
-                    self.gt = h5_file['gt'][:].transpose(0, 2, 3, 1)
-                else:
-                    self.has_gt = False
-
-                self.lms = h5_file['lms'][:].transpose(0, 2, 3, 1)
-                self.ms = h5_file['ms'][:].transpose(0, 2, 3, 1)
-                self.pan = h5_file['pan'][:].transpose(0, 2, 3, 1)
-
-            with h5py.File(self.dataroot.replace(".h5", "_pan.h5"), 'r') as h5_file:
-                self.lpan = h5_file['lpan'][:].transpose(0, 2, 3, 1)
+        with h5py.File(self.dataroot.replace(".h5", "_pan.h5"), 'r') as h5_file:
+            self.lpan = h5_file['lpan'][:].transpose(0, 2, 3, 1)
 
         self.crop = crop
         self.hflip = hflip
