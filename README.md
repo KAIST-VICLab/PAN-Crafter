@@ -27,6 +27,9 @@
         <a href="https://arxiv.org/abs/2505.23367" target='_blank'>
         <img src="https://img.shields.io/badge/arXiv-2505.23367-b31b1b.svg">
         </a>
+        <a href="https://youtu.be/kQeZz6X5ag8" target='_blank'>
+        <img src="https://img.shields.io/badge/Presentation-%23FF0000.svg?logo=YouTube&logoColor=white">
+        </a>
         <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/KAIST-VICLab/PAN-Crafter">
     </h4>
 </div>
@@ -46,10 +49,21 @@ This repository is the official PyTorch implementation of "PAN-Crafter: Learning
 ---
 
 ## 📧 News
+- **Jul 26, 2025:** Youtube video about PAN-Crafter is uploaded :sparkles:
 - **Jul 18, 2025:** Codes of PAN-Crafter are released :fire:
 - **Jun 26, 2025:** PAN-Crafter accepted to ICCV 2025 :tada:
 - **May 30, 2025:** This repository is created
 
+---
+## Reference
+```BibTeX
+@inproceedings{do2025pancrafter,
+  title={PAN-Crafter: Learning Modality-Consistent Alignment for PAN-Sharpening},
+  author={Do, Jeonghyeok, Kim, Sungpyo, Youk, Geunhyuk, Lee, Jaehyup, and Kim, Munchurl},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  year={2025}
+}
+```
 ---
 
 ## Contents
