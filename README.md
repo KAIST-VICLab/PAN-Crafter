@@ -30,6 +30,9 @@
         <a href="https://youtu.be/kQeZz6X5ag8" target='_blank'>
         <img src="https://img.shields.io/badge/Presentation-%23FF0000.svg?logo=YouTube&logoColor=white">
         </a>
+        <a href="https://drive.google.com/file/d/1MySS-KZ2GB6c1VgpYziVicgSPeG56NYC/view?usp=drive_link" target='_blank'>
+            <img src="https://img.shields.io/badge/Poster-orange">
+        </a>
         <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/KAIST-VICLab/PAN-Crafter">
     </h4>
 </div>
