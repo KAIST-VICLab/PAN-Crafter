@@ -24,6 +24,12 @@
         <a href="https://kaist-viclab.github.io/PAN-Crafter_site/" target='_blank'>
         <img src="https://img.shields.io/badge/🏠-Project%20Page-blue">
         </a>
+        <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Do_PAN-Crafter_Learning_Modality-Consistent_Alignment_for_PAN-Sharpening_ICCV_2025_paper.pdf" target='_blank'>
+        <img src="https://img.shields.io/badge/2025-ICCV-brightgreen">
+        </a>
+        <a href="https://openaccess.thecvf.com/content/ICCV2025/supplemental/Do_PAN-Crafter_Learning_Modality-Consistent_ICCV_2025_supplemental.pdf" target='_blank'>
+        <img src="https://img.shields.io/badge/2025-ICCV Supp.-brightgreen">
+        </a>
         <a href="https://arxiv.org/abs/2505.23367" target='_blank'>
         <img src="https://img.shields.io/badge/arXiv-2505.23367-b31b1b.svg">
         </a>
@@ -60,11 +66,13 @@ This repository is the official PyTorch implementation of "PAN-Crafter: Learning
 ---
 ## Reference
 ```BibTeX
-@inproceedings{do2025pancrafter,
-  title={PAN-Crafter: Learning Modality-Consistent Alignment for PAN-Sharpening},
-  author={Do, Jeonghyeok, Kim, Sungpyo, Youk, Geunhyuk, Lee, Jaehyup, and Kim, Munchurl},
-  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
-  year={2025}
+@InProceedings{Do_2025_ICCV,
+    author    = {Do, Jeonghyeok and Kim, Sungpyo and Youk, Geunhyuk and Lee, Jaehyup and Kim, Munchurl},
+    title     = {PAN-Crafter: Learning Modality-Consistent Alignment for PAN-Sharpening},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {4242-4252}
 }
 ```
 ---
